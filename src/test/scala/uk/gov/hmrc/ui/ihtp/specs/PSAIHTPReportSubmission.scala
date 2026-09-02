@@ -771,7 +771,9 @@ class PSAIHTPReportSubmission extends BaseSpec {
 
       Then("User verifies if the changed details for Country of PR and Address of PR are correct")
       CheckYourAnswersPage.verifyCountryOfSpain("Spain")
-      CheckYourAnswersPage.verifyAddressOfOrganisation("Spanish Address 1\nSpanish Address 2\nSpanish Address 3\nTE5710")
+      CheckYourAnswersPage.verifyAddressOfOrganisation(
+        "Spanish Address 1\nSpanish Address 2\nSpanish Address 3\nTE5710"
+      )
 
       And("User click on Save and Continue button on the Check and submit the report page ")
       CheckYourAnswersPage.SaveAndContinueButton()
