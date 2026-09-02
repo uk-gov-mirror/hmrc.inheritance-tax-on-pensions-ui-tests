@@ -517,10 +517,10 @@ class PSAIHTPReportSubmission extends BaseSpec {
 
       And("User is able to enter Details of the Beneficiary and continues to next Page")
       EnterNameOfBeneficiaryPage.enterBeneficiaryDetails(
-        "Mr",
+        "Dr",
         "BeneficiaryFirstName",
-        "D",
-        "Doe"
+        "BeneficiaryMiddleName",
+        "BeneficiarySurnameName"
       )
 
       Then("User will be on Does Beneficiary have a National Insurance Number Page")
@@ -541,10 +541,10 @@ class PSAIHTPReportSubmission extends BaseSpec {
       )
       EnterNameOfNewBeneficiaryPage.verifyPageDetails() shouldBe true
       EnterNameOfNewBeneficiaryPage.enterBeneficiaryDetails(
-        "Mr",
-        "Peter",
-        "S",
-        "Doe"
+        "Dr",
+        "BeneficiaryFirstName",
+        "BeneficiaryMiddleName",
+        "BeneficiarySurnameName"
       )
 
       Then("User will be on Does Beneficiary have a National Insurance Number Page")
@@ -1090,10 +1090,10 @@ class PSAIHTPReportSubmission extends BaseSpec {
 
       And("User is able to enter Details of the Beneficiary and continues to next Page")
       EnterNameOfBeneficiaryPage.enterBeneficiaryDetails(
-        "Mr",
+        "Dr",
         "BeneficiaryFirstName",
-        "D",
-        "Doe"
+        "BeneficiaryMiddleName",
+        "BeneficiarySurnameName"
       )
 
       Then("User will be on Does Beneficiary have a National Insurance Number Page")
@@ -1114,10 +1114,10 @@ class PSAIHTPReportSubmission extends BaseSpec {
       )
       EnterNameOfNewBeneficiaryPage.verifyPageDetails() shouldBe true
       EnterNameOfNewBeneficiaryPage.enterBeneficiaryDetails(
-        "Mr",
-        "Peter",
-        "S",
-        "Doe"
+        "Dr",
+        "BeneficiaryFirstName",
+        "BeneficiaryMiddleName",
+        "BeneficiarySurnameName"
       )
 
       Then("User will be on Does Beneficiary have a National Insurance Number Page")
