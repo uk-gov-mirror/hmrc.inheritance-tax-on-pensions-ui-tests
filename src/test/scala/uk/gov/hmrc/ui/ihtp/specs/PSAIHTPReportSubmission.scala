@@ -78,7 +78,7 @@ class PSAIHTPReportSubmission extends BaseSpec {
       NoNationalInsuranceNumberReasonPage.navigateTo(EnterBirthDeathPage.pageUrl)
       EnterBirthDeathPage.verifyPageDetails() shouldBe true
 
-      And("User enters Date of Birth and Death Date then continues to the next page")
+      And("User enters Date of Birth and Date of Death then continues to the next page")
       EnterBirthDeathPage.enterBirthDate("01", "01", "1990")
       EnterBirthDeathPage.enterDeathDate("11", "12", "2025")
 
@@ -152,10 +152,10 @@ class PSAIHTPReportSubmission extends BaseSpec {
 
       And("User is able to enter Details of the Beneficiary and continues to next Page")
       EnterNameOfBeneficiaryPage.enterBeneficiaryDetails(
-        "Mr",
+        "Dr",
         "BeneficiaryFirstName",
-        "D",
-        "DeceasedSurnameName"
+        "BeneficiaryMiddleName",
+        "BeneficiaryLastName"
       )
 
       Then("User will be on Does Beneficiary have a National Insurance Number Page")
@@ -202,7 +202,7 @@ class PSAIHTPReportSubmission extends BaseSpec {
       LookUpPostcodePage.enterAddressLine1("Spanish Address 1")
       LookUpPostcodePage.enterAddressLine2("Spanish Address 2")
       LookUpPostcodePage.enterAddressLine3("Spanish Address 3")
-      LookUpPostcodePage.enterPostcode("49610")
+      LookUpPostcodePage.enterPostcode("TE5710")
 
       Then("User is navigated to Review and confirm Page")
       ReviewAndConfirmPage.verifyPageHeading() shouldBe true
@@ -211,7 +211,7 @@ class PSAIHTPReportSubmission extends BaseSpec {
 
       Then("User verifies if the changed details for Country of PR and Address of PR are correct")
       CheckYourAnswersPage.verifyCountryOfSpain("Spain")
-      CheckYourAnswersPage.verifyAddressOfPr("Spanish Address 1\nSpanish Address 2\nSpanish Address 3\n49610")
+      CheckYourAnswersPage.verifyAddressOfPr("Spanish Address 1\nSpanish Address 2\nSpanish Address 3\nTE5710")
 
       Then("User clicks on Save and Continue button on the Check and submit the report page ")
       CheckYourAnswersPage.SaveAndContinueButton()
@@ -237,7 +237,7 @@ class PSAIHTPReportSubmission extends BaseSpec {
     }
 
     Scenario(
-      "2. PSA User Can Submit IHTP Application, Individual and Yes NI, Yes for Payment Notice submission, No for beneficiaries known"
+      "2. PSA User Can Submit IHTP Application, Individual and No NI, Yes for Payment Notice submission, No for beneficiaries known"
     ) {
 
       Given("the user is logged in as an organisation user")
@@ -279,7 +279,7 @@ class PSAIHTPReportSubmission extends BaseSpec {
       NationalInsuranceNumberPage.verifyPageHeading() shouldBe true
 
       And("User selects No for Does User has National Number")
-      NationalInsuranceNumberPage.clickRadioButton("Yes")
+      NationalInsuranceNumberPage.clickRadioButton("No")
 
       Then("User will navigates to Enter reason for no NI number Page")
       NationalInsuranceNumberPage.navigateTo(EnterNationalInsuranceNumberPage.pageUrl)
@@ -287,13 +287,13 @@ class PSAIHTPReportSubmission extends BaseSpec {
       EnterNationalInsuranceNumberPage.verifyPageHeading() shouldBe true
 
       Then("User enters reason for no National Insurance Number and continues to next Page")
-      EnterNationalInsuranceNumberPage.enterNINO("ST533331B")
+      NoNationalInsuranceNumberReasonPage.enterReason("the deceased was not a UK citizen")
 
       Then("User is navigated to the Enter the birth and death dates of the user Page")
       EnterNationalInsuranceNumberPage.navigateTo(EnterBirthDeathPage.pageUrl)
       EnterBirthDeathPage.verifyPageDetails() shouldBe true
 
-      And("User enters Date of Birth and Death Date then continues to the next page")
+      And("User enters Date of Birth and Date of Death then continues to the next page")
       EnterBirthDeathPage.enterBirthDate("01", "01", "1990")
       EnterBirthDeathPage.enterDeathDate("11", "12", "2025")
 
@@ -450,7 +450,7 @@ class PSAIHTPReportSubmission extends BaseSpec {
       NoNationalInsuranceNumberReasonPage.navigateTo(EnterBirthDeathPage.pageUrl)
       EnterBirthDeathPage.verifyPageDetails() shouldBe true
 
-      And("User enters Date of Birth and Death Date then continues to the next page")
+      And("User enters Date of Birth and Date of Death then continues to the next page")
       EnterBirthDeathPage.enterBirthDate("01", "01", "1990")
       EnterBirthDeathPage.enterDeathDate("11", "12", "2025")
 
@@ -654,7 +654,7 @@ class PSAIHTPReportSubmission extends BaseSpec {
       NoNationalInsuranceNumberReasonPage.navigateTo(EnterBirthDeathPage.pageUrl)
       EnterBirthDeathPage.verifyPageDetails() shouldBe true
 
-      And("User enters Date of Birth and Death Date then continues to the next page")
+      And("User enters Date of Birth and Date of Death then continues to the next page")
       EnterBirthDeathPage.enterBirthDate("01", "01", "1990")
       EnterBirthDeathPage.enterDeathDate("11", "12", "2025")
 
@@ -762,7 +762,7 @@ class PSAIHTPReportSubmission extends BaseSpec {
       LookUpPostcodePage.enterAddressLine1("Spanish Address 1")
       LookUpPostcodePage.enterAddressLine2("Spanish Address 2")
       LookUpPostcodePage.enterAddressLine3("Spanish Address 3")
-      LookUpPostcodePage.enterPostcode("49610")
+      LookUpPostcodePage.enterPostcode("TE5710")
 
       Then("User is navigated to Review and confirm Page")
       ReviewAndConfirmPage.verifyPageHeading() shouldBe true
@@ -771,7 +771,7 @@ class PSAIHTPReportSubmission extends BaseSpec {
 
       Then("User verifies if the changed details for Country of PR and Address of PR are correct")
       CheckYourAnswersPage.verifyCountryOfSpain("Spain")
-      CheckYourAnswersPage.verifyAddressOfOrganisation("Spanish Address 1\nSpanish Address 2\nSpanish Address 3\n49610")
+      CheckYourAnswersPage.verifyAddressOfOrganisation("Spanish Address 1\nSpanish Address 2\nSpanish Address 3\nTE5710")
 
       And("User click on Save and Continue button on the Check and submit the report page ")
       CheckYourAnswersPage.SaveAndContinueButton()
@@ -854,7 +854,7 @@ class PSAIHTPReportSubmission extends BaseSpec {
       NoNationalInsuranceNumberReasonPage.navigateTo(EnterBirthDeathPage.pageUrl)
       EnterBirthDeathPage.verifyPageDetails() shouldBe true
 
-      And("User enters Date of Birth and Death Date then continues to next page")
+      And("User enters Date of Birth and Date of Death then continues to next page")
       EnterBirthDeathPage.enterBirthDate("01", "01", "1990")
       EnterBirthDeathPage.enterDeathDate("11", "12", "2025")
 
@@ -1018,7 +1018,7 @@ class PSAIHTPReportSubmission extends BaseSpec {
       NoNationalInsuranceNumberReasonPage.navigateTo(EnterBirthDeathPage.pageUrl)
       EnterBirthDeathPage.verifyPageDetails() shouldBe true
 
-      And("User enters Date of Birth and Death Date then continues to next page")
+      And("User enters Date of Birth and Date of Death then continues to next page")
       EnterBirthDeathPage.enterBirthDate("01", "01", "1990")
       EnterBirthDeathPage.enterDeathDate("11", "12", "2025")
 
