@@ -671,7 +671,7 @@ class PSAIHTPReportSubmission extends BaseSpec {
       NameOfTheOrganisationPage.verifyPageHeading() shouldBe true
 
       And("User is able to enter Organisation name and continues to next Page")
-      NameOfTheOrganisationPage.enterOrganisationName("Kapil & Sons Ltd.")
+      NameOfTheOrganisationPage.enterOrganisationName("Testdata Company Ltd.")
 
       Then("User is navigated to the Enter Name of the PR Organisation name Page")
       OrganisationRepresentativeNamePage.verifyPageDetails() shouldBe true
@@ -684,7 +684,7 @@ class PSAIHTPReportSubmission extends BaseSpec {
         "PRSurnameName"
       )
 
-      Then("User is navigated to Select the country or territory of Kapil & Sons Ltd.")
+      Then("User is navigated to Select the country or territory of Testdata Company Ltd.")
       CountryPickerPage.verifyPage()
       CountryPickerPage.enterCountry("United Kingdom")
 
