@@ -59,9 +59,9 @@ class PSPIHTPReportSubmission extends BaseSpec {
       And("User is able to enter Details of the Deceased")
       DeceasedNamePage.enterDeceasedDetails(
         "Mr",
-        "Joe",
-        "Test",
-        "Doe"
+        "DeceasedFirstName",
+        "DeceasedMiddleName",
+        "DeceasedSurnameName"
       )
 
       Then("User should be able to Navigate to National Insurance Number Page")
@@ -106,9 +106,9 @@ class PSPIHTPReportSubmission extends BaseSpec {
       And("User is able to enter Details of the PR and continues to next Page")
       PRNamePage.enterPRDetails(
         "Mr",
-        "John",
-        "S",
-        "Smith"
+        "PRFirstName",
+        "PRMiddleName",
+        "PRSurnameName"
       )
 
       Then("User is navigated to the Select Country Page")
@@ -128,7 +128,7 @@ class PSPIHTPReportSubmission extends BaseSpec {
       ReviewAndConfirmPage.verifyPage()
       ReviewAndConfirmPage.confirmAddressButton()
 
-      Then("User is navigated to Did John Smith submit the payment notice? Page")
+      Then("User is navigated to Did PRFirstName PRSurnameName submit the payment notice? Page")
       SubmitPaymentNoticePage.verifyPageDetails() shouldBe true
 
       And("User Clicks on Yes Radio button and click on continue button")
@@ -160,10 +160,10 @@ class PSPIHTPReportSubmission extends BaseSpec {
 
       And("User is able to enter Details of the Beneficiary and continues to next Page")
       EnterNameOfBeneficiaryPage.enterBeneficiaryDetails(
-        "Mr",
-        "John",
-        "D",
-        "Doe"
+        "Dr",
+        "BeneficiaryFirstName",
+        "BeneficiaryMiddleName",
+        "BeneficiaryLastName"
       )
 
       Then("User will be on Does Beneficiary have a National Insurance Number")
@@ -250,9 +250,9 @@ class PSPIHTPReportSubmission extends BaseSpec {
       And("User is able to enter Details of the Deceased")
       DeceasedNamePage.enterDeceasedDetails(
         "Mr",
-        "Joe",
-        "Test",
-        "Doe"
+        "DeceasedFirstName",
+        "DeceasedMiddleName",
+        "DeceasedSurnameName"
       )
 
       Then("User should be able to Navigate to National Insurance Number Page")
@@ -293,7 +293,7 @@ class PSPIHTPReportSubmission extends BaseSpec {
       NameOfTheOrganisationPage.verifyPageHeading() shouldBe true
 
       And("User is able to enter Organisation name and continues to next Page")
-      NameOfTheOrganisationPage.enterOrganisationName("Kapil & Sons Ltd.")
+      NameOfTheOrganisationPage.enterOrganisationName("Testdata Company Ltd.")
 
       Then("User is navigated to the Enter Name of the PR Organisation name Page")
       OrganisationRepresentativeNamePage.verifyPageDetails() shouldBe true
@@ -301,12 +301,12 @@ class PSPIHTPReportSubmission extends BaseSpec {
       And("User should able to enter PR details and continues to next Page")
       OrganisationRepresentativeNamePage.enterOrgRepresentativeDetails(
         "Mr",
-        "John",
-        "S",
-        "Smith"
+        "PRFirstName",
+        "PRMiddleName",
+        "PRSurnameName"
       )
 
-      Then("User is navigated to Select the country or territory of Kapil & Sons Ltd.")
+      Then("User is navigated to Select the country or territory of Testdata Company Ltd.")
       CountryPickerPage.verifyPage()
       CountryPickerPage.enterCountry("United Kingdom")
 
