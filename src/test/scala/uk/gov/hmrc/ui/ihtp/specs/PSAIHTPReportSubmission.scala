@@ -54,16 +54,16 @@ class PSAIHTPReportSubmission extends BaseSpec {
       And("User is able to enter Details of the Deceased and continues to next Page")
       DeceasedNamePage.enterDeceasedDetails(
         "Mr",
-        "Joe",
-        "Test",
-        "Doe"
+        "DeceasedFirstName",
+        "DeceasedMiddleName",
+        "DeceasedSurnameName"
       )
 
       Then("User is navigated to the National Insurance Number Page")
       DeceasedNamePage.navigateTo(NationalInsuranceNumberPage.pageUrl)
       NationalInsuranceNumberPage.verifyPageDetails() shouldBe true
 
-      And("User selects No for Does Joe Doe have a National Insurance number?")
+      And("User selects No for Does DeceasedFirstName DeceasedSurnameName have a National Insurance number?")
       NationalInsuranceNumberPage.clickRadioButton("No")
 
       Then("User will navigates to Enter reason for no NI number Page")
@@ -98,9 +98,9 @@ class PSAIHTPReportSubmission extends BaseSpec {
       And("User is able to enter Details of the PR and continues to next Page")
       PRNamePage.enterPRDetails(
         "Mr",
-        "John",
-        "S",
-        "Smith"
+        "PRFirstName",
+        "PRMiddleName",
+        "PRSurnameName"
       )
 
       Then("User is navigated to the Select Country Page")
@@ -120,7 +120,7 @@ class PSAIHTPReportSubmission extends BaseSpec {
       ReviewAndConfirmPage.verifyPage()
       ReviewAndConfirmPage.confirmAddressButton()
 
-      Then("User is navigated to Did John Smith submit the payment notice? Page")
+      Then("User is navigated to Did PRFirstName PRSurnameName submit the payment notice? Page")
       SubmitPaymentNoticePage.verifyPageDetails() shouldBe true
 
       And("User Clicks on Yes Radio button and click on continue button")
@@ -153,9 +153,9 @@ class PSAIHTPReportSubmission extends BaseSpec {
       And("User is able to enter Details of the Beneficiary and continues to next Page")
       EnterNameOfBeneficiaryPage.enterBeneficiaryDetails(
         "Mr",
-        "John",
+        "BeneficiaryFirstName",
         "D",
-        "Doe"
+        "DeceasedSurnameName"
       )
 
       Then("User will be on Does Beneficiary have a National Insurance Number Page")
@@ -268,9 +268,9 @@ class PSAIHTPReportSubmission extends BaseSpec {
       And("User is able to enter Details of the Deceased and continues to next Page")
       DeceasedNamePage.enterDeceasedDetails(
         "Mr",
-        "Joe",
-        "Test",
-        "Doe"
+        "DeceasedFirstName",
+        "DeceasedMiddleName",
+        "DeceasedSurnameName"
       )
 
       Then("User is navigated to the National Insurance Number Page")
@@ -313,9 +313,9 @@ class PSAIHTPReportSubmission extends BaseSpec {
       And("User is able to enter Details of the PR and continues to next Page")
       PRNamePage.enterPRDetails(
         "Mr",
-        "John",
-        "S",
-        "Smith"
+        "PRFirstName",
+        "PRMiddleName",
+        "PRSurnameName"
       )
 
       Then("User is navigated to the Select Country Page")
@@ -335,7 +335,7 @@ class PSAIHTPReportSubmission extends BaseSpec {
       ReviewAndConfirmPage.verifyPage()
       ReviewAndConfirmPage.confirmAddressButton()
 
-      Then("User is navigated to Did John Smith submit the payment notice? page")
+      Then("User is navigated to Did PRFirstName PRSurnameName submit the payment notice? page")
       SubmitPaymentNoticePage.verifyPageDetails() shouldBe true
 
       And("User Clicks on Yes Radio button and click on continue button")
@@ -426,16 +426,16 @@ class PSAIHTPReportSubmission extends BaseSpec {
       And("User is able to enter Details of the Deceased and continues to next Page")
       DeceasedNamePage.enterDeceasedDetails(
         "Mr",
-        "Joe",
-        "Test",
-        "Doe"
+        "DeceasedFirstName",
+        "DeceasedMiddleName",
+        "DeceasedSurnameName"
       )
 
       Then("User is navigated to the National Insurance Number Page")
       DeceasedNamePage.navigateTo(NationalInsuranceNumberPage.pageUrl)
       NationalInsuranceNumberPage.verifyPageDetails() shouldBe true
 
-      And("User selects No for Does Joe Doe have a National Insurance number?")
+      And("User selects No for Does DeceasedFirstName DeceasedSurnameName have a National Insurance number?")
       NationalInsuranceNumberPage.clickRadioButton("No")
 
       Then("User will navigates to Enter reason for no NI number Page")
@@ -470,9 +470,9 @@ class PSAIHTPReportSubmission extends BaseSpec {
       And("User is able to enter Details of the PR and continues to next Page")
       PRNamePage.enterPRDetails(
         "Mr",
-        "John",
-        "S",
-        "Smith"
+        "PRFirstName",
+        "PRMiddleName",
+        "PRSurnameName"
       )
 
       Then("User is navigated to the Select Country Page")
@@ -492,7 +492,7 @@ class PSAIHTPReportSubmission extends BaseSpec {
       ReviewAndConfirmPage.verifyPage()
       ReviewAndConfirmPage.confirmAddressButton()
 
-      Then("User is navigated to Did John Smith submit the payment notice? Page")
+      Then("User is navigated to Did PRFirstName PRSurnameName submit the payment notice? Page")
       SubmitPaymentNoticePage.verifyPageDetails() shouldBe true
 
       And("User Clicks on Yes Radio button and click on continue button")
@@ -518,7 +518,7 @@ class PSAIHTPReportSubmission extends BaseSpec {
       And("User is able to enter Details of the Beneficiary and continues to next Page")
       EnterNameOfBeneficiaryPage.enterBeneficiaryDetails(
         "Mr",
-        "John",
+        "BeneficiaryFirstName",
         "D",
         "Doe"
       )
@@ -630,16 +630,16 @@ class PSAIHTPReportSubmission extends BaseSpec {
       And("User is able to enter Details of the Deceased")
       DeceasedNamePage.enterDeceasedDetails(
         "Mr",
-        "Joe",
-        "Test",
-        "Doe"
+        "DeceasedFirstName",
+        "DeceasedMiddleName",
+        "DeceasedSurnameName"
       )
 
       Then("User is navigated to the National Insurance Number Page")
       DeceasedNamePage.navigateTo(NationalInsuranceNumberPage.pageUrl)
       NationalInsuranceNumberPage.verifyPageDetails() shouldBe true
 
-      And("User selects No for Does Joe Doe have a National Insurance number?")
+      And("User selects No for Does DeceasedFirstName DeceasedSurnameName have a National Insurance number?")
       NationalInsuranceNumberPage.clickRadioButton("No")
 
       Then("User will navigates to Enter reason for no NI number Page")
@@ -679,9 +679,9 @@ class PSAIHTPReportSubmission extends BaseSpec {
       And("User should able to enter PR details and continues to next Page")
       OrganisationRepresentativeNamePage.enterOrgRepresentativeDetails(
         "Mr",
-        "John",
-        "S",
-        "Smith"
+        "PRFirstName",
+        "PRMiddleName",
+        "PRSurnameName"
       )
 
       Then("User is navigated to Select the country or territory of Kapil & Sons Ltd.")
@@ -701,7 +701,7 @@ class PSAIHTPReportSubmission extends BaseSpec {
       ReviewAndConfirmPage.verifyPage()
       ReviewAndConfirmPage.confirmAddressButton()
 
-      Then("User is navigated to Did John Smith submit the payment notice? Page")
+      Then("User is navigated to Did PRFirstName PRSurnameName submit the payment notice? Page")
       SubmitPaymentNoticePage.verifyPageDetails() shouldBe true
 
       And("User Clicks on Yes Radio button and click on continue button")
@@ -830,16 +830,16 @@ class PSAIHTPReportSubmission extends BaseSpec {
       And("User is able to enter Details of the Deceased")
       DeceasedNamePage.enterDeceasedDetails(
         "Mr",
-        "Joe",
-        "Test",
-        "Doe"
+        "DeceasedFirstName",
+        "DeceasedMiddleName",
+        "DeceasedSurnameName"
       )
 
       Then("User is navigated to the National Insurance Number Page")
       DeceasedNamePage.navigateTo(NationalInsuranceNumberPage.pageUrl)
       NationalInsuranceNumberPage.verifyPageDetails() shouldBe true
 
-      And("User selects No for Does Joe Doe have a National Insurance number?")
+      And("User selects No for Does DeceasedFirstName DeceasedSurnameName have a National Insurance number?")
       NationalInsuranceNumberPage.clickRadioButton("No")
 
       Then("User will navigates to Enter reason for no NI number Page")
@@ -879,9 +879,9 @@ class PSAIHTPReportSubmission extends BaseSpec {
       And("User should able to enter PR details and continues to next Page")
       OrganisationRepresentativeNamePage.enterOrgRepresentativeDetails(
         "Mr",
-        "John",
-        "S",
-        "Smith"
+        "PRFirstName",
+        "PRMiddleName",
+        "PRSurnameName"
       )
 
       Then("User is navigated to Select the country or territory of Test & Orgs Ltd.")
@@ -901,7 +901,7 @@ class PSAIHTPReportSubmission extends BaseSpec {
       ReviewAndConfirmPage.verifyPage()
       ReviewAndConfirmPage.confirmAddressButton()
 
-      Then("User is navigated to Did John Smith submit the payment notice? Page")
+      Then("User is navigated to Did PRFirstName PRSurnameName submit the payment notice? Page")
       SubmitPaymentNoticePage.verifyPageDetails() shouldBe true
 
       And("User Clicks on No Radio button and click on continue button")
@@ -994,16 +994,16 @@ class PSAIHTPReportSubmission extends BaseSpec {
       And("User is able to enter Details of the Deceased")
       DeceasedNamePage.enterDeceasedDetails(
         "Mr",
-        "Joe",
-        "Test",
-        "Doe"
+        "DeceasedFirstName",
+        "DeceasedMiddleName",
+        "DeceasedSurnameName"
       )
 
       Then("User is navigated to the National Insurance Number Page")
       DeceasedNamePage.navigateTo(NationalInsuranceNumberPage.pageUrl)
       NationalInsuranceNumberPage.verifyPageDetails() shouldBe true
 
-      And("User selects No for Does Joe Doe have a National Insurance number?")
+      And("User selects No for Does DeceasedFirstName DeceasedSurnameName have a National Insurance number?")
       NationalInsuranceNumberPage.clickRadioButton("No")
 
       Then("User will navigates to Enter reason for no NI number Page")
@@ -1043,9 +1043,9 @@ class PSAIHTPReportSubmission extends BaseSpec {
       And("User should able to enter PR details and continues to next Page")
       OrganisationRepresentativeNamePage.enterOrgRepresentativeDetails(
         "Mr",
-        "John",
-        "S",
-        "Smith"
+        "PRFirstName",
+        "PRMiddleName",
+        "PRSurnameName"
       )
 
       Then("User is navigated to Select the country or territory of Test & Orgs Ltd.")
@@ -1065,7 +1065,7 @@ class PSAIHTPReportSubmission extends BaseSpec {
       ReviewAndConfirmPage.verifyPage()
       ReviewAndConfirmPage.confirmAddressButton()
 
-      Then("User is navigated to Did John Smith submit the payment notice? Page")
+      Then("User is navigated to Did PRFirstName PRSurnameName submit the payment notice? Page")
       SubmitPaymentNoticePage.verifyPageDetails() shouldBe true
 
       And("User Clicks on No Radio button and click on continue button")
@@ -1091,7 +1091,7 @@ class PSAIHTPReportSubmission extends BaseSpec {
       And("User is able to enter Details of the Beneficiary and continues to next Page")
       EnterNameOfBeneficiaryPage.enterBeneficiaryDetails(
         "Mr",
-        "John",
+        "BeneficiaryFirstName",
         "D",
         "Doe"
       )
