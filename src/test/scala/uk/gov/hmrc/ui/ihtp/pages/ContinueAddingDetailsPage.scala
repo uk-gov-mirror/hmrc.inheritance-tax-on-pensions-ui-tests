@@ -1,5 +1,5 @@
 /*
- * Copyright 2026 HM Revenue & Customs
+ * Copyright 2024 HM Revenue & Customs
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -16,18 +16,12 @@
 
 package uk.gov.hmrc.ui.ihtp.pages
 
-object EnterAmountofIHTPayable extends BasePage {
-  override val pageUrl: String   = s"$baseUrl/enter-iht-payable"
-  override val pageTitle: String =
-    "Enter the amount of Inheritance Tax payable - Report Inheritance Tax on a pension - GOV.UK"
-  val pageHeading: String        = "Enter the amount of Inheritance Tax payable"
+object ContinueAddingDetailsPage extends BasePage {
+  override val pageUrl: String   = s"$baseUrl/continue-adding-details"
+  override val pageTitle: String = "Continue adding report details - Report inheritance tax on a pension - GOV.UK"
+  val pageHeading: String        = "Continue adding report details"
 
   def verifyPageHeading(): Boolean =
     getPageSource.contains(pageHeading)
-
-  def enterAmountOfIHTPayable(textToEnter: String): Unit = {
-    enterText("value", textToEnter)
-    clickSaveAndContinueButton()
-  }
 
 }
