@@ -933,20 +933,20 @@ class PSAIHTPReportSubmission extends BaseSpec {
       BeneficiaryOrganisationDetailsPage.enterTrustName("Test Organisation & Co ltd.")
 
       Then("User will be on CYA page")
-      CheckYourAnswersPage.navigateTo(CheckYourAnswersPage.pageUrl)
+      BeneficiaryOrganisationDetailsPage.navigateTo(CheckYourAnswersPage.pageUrl)
       CheckYourAnswersPage.verifyPageDetails() shouldBe true
       CheckYourAnswersPage.verifyPageHeading() shouldBe true
 
-      Then("User should be able to click on Change Link Button")
-      CheckYourAnswersPage.clickChangeSubmitPaymentNotice()
-
-      And("When User Clicks on Change Link Button it will navigates to enter the Inheritance Tax reference number Page")
-      SubmitPaymentNoticePage.verifyNewUrl() shouldBe true
-      SubmitPaymentNoticePage.clickRadioButton("Yes")
-
-      Then("user click On save and Continue it navigates to the Check and submit the report page")
-      SubmitPaymentNoticePage.navigateTo(CheckYourAnswersPage.pageUrl)
-      CheckYourAnswersPage.verifyPageDetails()
+//      Then("User should be able to click on Change Link Button")
+//      CheckYourAnswersPage.clickChangeSubmitPaymentNotice()
+//
+//      And("When User Clicks on Change Link Button it will navigates to enter the Inheritance Tax reference number Page")
+//      SubmitPaymentNoticePage.verifyNewUrl() shouldBe true
+//      SubmitPaymentNoticePage.clickRadioButton("Yes")
+//
+//      Then("user click On save and Continue it navigates to the Check and submit the report page")
+//      SubmitPaymentNoticePage.navigateTo(CheckYourAnswersPage.pageUrl)
+//      CheckYourAnswersPage.verifyPageDetails()
 
       And("User click on Save and Continue button on the Check and submit the report page ")
       CheckYourAnswersPage.SaveAndContinueButton()

@@ -23,12 +23,20 @@ object OverviewPage extends BasePage {
   val mpsPageUrl: String         = "http://localhost:8204/manage-pension-schemes/you-need-to-register"
   override val pageTitle: String = "Report Inheritance Tax on a pension - Report inheritance tax on a pension - GOV.UK"
   val pageHeading: String        = "Report Inheritance Tax on a pension"
+  val deceasedNameLink: By       =
+    By.xpath("//a[@id='deceased-name-None' and contains(., 'UniqueDeceasedFirstName UniqueDeceasedSurnameName')]")
 
   def verifyPageHeading(): Boolean =
     getPageSource.contains(pageHeading)
 
   def clickLink(): Unit =
     click(By.id("start-new-submission"))
+
+  def clickLinkBackToReport(): Unit =
+    click(By.id("deceased-name-None"))
+
+  def clickLinkByIdAndText(): Unit =
+    click(deceasedNameLink)
 
   def verifyRegistrationReminderPage(): Boolean = {
     val mainHeading      = "You need to register as a pension scheme administrator or practitioner"
